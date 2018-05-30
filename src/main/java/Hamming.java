@@ -2,13 +2,14 @@ public class Hamming {
 	private String leftStrand, rightStrand;
 
   Hamming(String leftStrand, String rightStrand) {
+
+    checkValidStrands(leftStrand, rightStrand);
+
     this.leftStrand = leftStrand;
     this.rightStrand = rightStrand;
   }
 
   public int getHammingDistance() {
-
-    checkValidStrands(leftStrand, rightStrand);
 
     int hammingDistance = 0;
     for(int i = 0; i < leftStrand.length(); i++) {
